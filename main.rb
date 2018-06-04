@@ -1,5 +1,6 @@
 require './core/count_words'
 require './core/file_reader'
+require 'facets'
 
 if ARGV.length.zero? || ARGV.length > 1
   puts 'Wrong arguments'
@@ -8,7 +9,11 @@ end
 
 content = Core::FileReader.open(ARGV[0])
 Core::CountWords.count(content)
-p GC.stat
+before = GC.stat
+p before
 GC.start
 p '#'*40
-p GC.stat
+after = GC.stat
+p after
+p '#'*40
+p before.diff(after)
