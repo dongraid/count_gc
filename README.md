@@ -58,5 +58,13 @@ ruby main.rb story.txt
 
 # Ruby 1.9.3
 **Before GC start**
+
+`{:count=>14, :heap_used=>77, :heap_length=>77, :heap_increment=>0, :heap_live_num=>19500, :heap_free_num=>11627, :heap_final_num=>248}`
+
 **After GC start**
+
+`{:count=>15, :heap_used=>77, :heap_length=>77, :heap_increment=>0, :heap_live_num=>19378, :heap_free_num=>12015, :heap_final_num=>0}`
+
 **Diff**
+
+`{:count=>14, :heap_live_num=>19500, :heap_free_num=>11627, :heap_final_num=>248}`
