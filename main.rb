@@ -9,3 +9,6 @@ end
 content = Core::FileReader.open(ARGV[0])
 Core::CountWords.count(content)
 p GC.stat
+GC.start
+p '#'*40
+p GC.stat
